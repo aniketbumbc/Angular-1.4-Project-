@@ -1,0 +1,29 @@
+﻿
+<h2 align="center">{{message}}</h2>
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th> Edition</th>
+            <th>Cost</th>
+            <th>User Name</th>
+            <th>User Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="book in Book">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.date}}</td>
+            <td>{{book.edition}}</td>
+            <td>{{book.cost}}</td>
+            <td>{{book.username}}</td>
+            <td>{{book.useremail}}</td>
+        </tr>
+    </tbody>
+</table>
+    </div>

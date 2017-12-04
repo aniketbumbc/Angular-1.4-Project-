@@ -1,0 +1,55 @@
+﻿<h1 align="center">
+    {{Fbinfo}}
+</h1>
+
+<div class="feedback">
+    <p align="center">
+        Thank you for taking the time to fill in our online feedback form.<br>
+        By providing us your feedback, you are helping us understand what we do well and <br>
+        what improvements we need to implement
+    </p>
+    <table align="center" style="width:20%"> <th> 
+    <form class="class1" name="feedbackform" ng-submit="sendFeedback()" novalidate>
+        <p align="center">
+            <font size="5" color="red"> Feedback Form  </font>
+            <div class="from-group" ng-class="{'has-error':feedbackform.firstname.$error.required && !feedbackform.firstname.$pristine}">
+                <label for="firstname" class="firstname">First Name</label> <br >
+                <input type="text" name="firstname" placeholder="Enter Your First Name" class="infirstname" id="Fname" ng-model="feedback.firstname" required />
+                <span ng-show="feedbackform.firstname.$error.requrired && !feedbackform.firstname.pristin" class="help-block"> First Name is need</span>
+            </div>
+
+
+
+            <div class="from-group" ng-class="{'has-error':feedbackform.lastname.$error.required && !feedbackform.lastname.$pristine}">
+
+
+                <label for="lastname" class="lastname"> Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <input type="text" name="lastname" class="inlastname" id="id2" placeholder="Last Name" ng-model="feedback.lastname" required><br>
+                <span ng-show="feedbackform.lastname.$error.requrired && !feedbackform.lastname.pristin" class="help-block"> Last Name is need</span>
+            </div>
+
+            <label for="contactnumber" class="contnumber" name="tel"> Contact Number</label>
+            <input type="text" id='id3' class="incontnumber" placeholder="10 digit number" ng-model="feedback.tel.number"><br>
+
+
+
+            <div class="from-group" ng-class="{'has-error':feedbackform.emailid.$error.required && !feedbackform.emailid.$pristine}">
+
+                <span ng-show="feedbackform.emailid.$invalid && !feedbackform.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true">    </span>
+                <span ng-show="feedbackform.emailid.$invalid && !feedbackform.emailid.$pristine" class="help-block"> Wrong ID</span>
+                <span ng-show="feedbackform.email.$error.requrired && !feedbackform.email.$pristine" class="help-block"> Email Id wrong</span>
+
+
+            </div>
+
+            <label for="email" class="email"> E-Mail</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <input type="email" name="emailid" class="inemail" id="id4" placeholder="Valid Email" ng-model="feedback.email" required><br> <br>
+
+         Some Comments 
+        <textarea class="textarea" rows="4" cols="20" id="area1" ng-model="feedback.comments"></textarea><br> <br>
+        <button type="submit" id="button1" class="but1" ng-disabled="feedbackform.$invalid"> Send Feedback</button>
+
+    </form>
+</th>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+﻿<h2>{{inquiryinfo}}</h2>
+
+<div>
+    Rows to display : <input type="number" step="1"
+                             ng-model="rowCount" max="10" min="0" />
+    Search : <input type="text" placeholder="Search name " ng-model="searchtext" /> 
+
+    <input type="checkbox" ng-model="hideprice" /> Show Currency Price
+</div>
+<br>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Publish Date</th>
+        <th>Edition</th>
+        <th>Price</th>
+        <th>Price In Curreny</th>
+
+
+    </tr>
+
+
+
+</thead>
+
+    <tbody>
+        <tr ng-repeat="info in booksinfo | limitTo:rowCount|filter:searchtext">
+          <td> {{info.name|uppercase}}</td>  
+           <td>{{info.DateOFPublish| date:"dd/MM/yyyy"}}</td> 
+           <td>{{info.editon|lowercase}}</td> 
+          <td ng-hide="hideprice">{{info.price|number:2}}</td>  
+           <td >{{info.price|currency}}</td>
+
+
+
+        </tr>
+
+
+    </tbody>
+
+
+</table>

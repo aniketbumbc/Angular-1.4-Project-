@@ -1,0 +1,59 @@
+﻿<h1>{{searchinfo}}</h1> 
+ 
+<table ng-show="image1">
+    <tbody>
+     <tr> 
+        <td> <img ng-src="{{image}}" /></td>
+         <td><ul>
+    <li ng-repeat="books in book">
+
+     <h3>{{books}}</h3>   
+
+    </li>
+
+</ul>
+         </td>    
+        </tr>  
+    </tbody>
+</table><br>
+<input type="button" value="Show New Books" ng-click='myfunction()'> 
+
+    <h2>{{abc}}</h2> 
+    <h4>
+        {{csharp}} <br>
+
+        <font size="3" color="red">
+            Comment Here: {{books1.comment}} <br> <br>
+            <input type="textarea" ng-model="books1.comment">
+        </font>
+    </h4>
+    
+<h4>
+    {{javagame}} <br>
+
+    <font size="3" color="red">
+        Comment Here: {{book1.comment}} <br> <br>
+        <input type="textarea" ng-model="book1.comment">
+    </font>
+</h4>
+
+
+<h4>
+    {{dotnet}} <br>
+
+    <font size="3" color="red">
+        Comment Here: {{book2.comment}} <br> <br>
+        <input type="textarea" ng-model="book2.comment">
+    </font>
+</h4>
+
+
+
+<h4>
+    {{angularjs1}} <br>
+
+    <font size="3" color="red">
+        Comment Here: {{book3.comment}} <br> <br>
+        <input type="textarea" ng-model="book3.comment">
+    </font>
+</h4>
